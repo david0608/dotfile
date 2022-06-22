@@ -2,15 +2,15 @@ set nocompatible
 
 call plug#begin()
 Plug 'overcache/NeoSolarized'
-"Plug 'vim-python/python-syntax'
-"Plug 'yuezk/vim-js'
-"Plug 'leafgarland/typescript-vim'
-"Plug 'maxmellon/vim-jsx-pretty'
-"Plug 'neoclide/jsonc.vim'
-"Plug 'Yggdroot/indentLine'
-"Plug 'jiangmiao/auto-pairs'
+" Plug 'vim-python/python-syntax'
+" Plug 'yuezk/vim-js'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'neoclide/jsonc.vim'
+" Plug 'Yggdroot/indentLine'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
-"Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug '~/.vim/example-plugin'
 call plug#end()
 
