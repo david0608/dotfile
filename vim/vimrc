@@ -2,15 +2,15 @@ set nocompatible
 
 call plug#begin()
 Plug 'overcache/NeoSolarized'
-" Plug 'vim-python/python-syntax'
-" Plug 'yuezk/vim-js'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'maxmellon/vim-jsx-pretty'
-" Plug 'neoclide/jsonc.vim'
-" Plug 'Yggdroot/indentLine'
-" Plug 'jiangmiao/auto-pairs'
+Plug 'vim-python/python-syntax'
+Plug 'yuezk/vim-js'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'neoclide/jsonc.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
-" Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 set path+=**
@@ -40,10 +40,10 @@ hi DiffDelete	ctermbg=52 ctermfg=88
 hi DiffText	ctermbg=23 ctermfg=14 cterm=bold
 
 " Enable python syntax highlight.
-"let g:python_highlight_all=1
+let g:python_highlight_all=1
 
 " Setup auto complete.
-"let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_completion=1
 
 " Setup NERDTree shortcuts.
 nnoremap <leader>n :NERDTreeFocus<CR>
