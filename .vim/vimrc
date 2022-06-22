@@ -9,14 +9,13 @@ Plug 'overcache/NeoSolarized'
 "Plug 'neoclide/jsonc.vim'
 "Plug 'Yggdroot/indentLine'
 "Plug 'jiangmiao/auto-pairs'
-"Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
 "Plug 'Valloric/YouCompleteMe'
-"Plug '~/.vim/example-plugin'
+Plug '~/.vim/example-plugin'
 call plug#end()
 
 set path+=**
 set wildmenu
-set nofixendofline
 set backup
 set undofile
 set backupdir=.backup/,~/.backup/,/tmp//
@@ -36,10 +35,10 @@ syntax enable
 set background=dark
 colorscheme NeoSolarized
 
-"hi DiffAdd	ctermbg=23 ctermfg=10 cterm=bold
-"hi DiffChange	ctermbg=52
-"hi DiffDelete	ctermbg=52 ctermfg=88
-"hi DiffText	ctermbg=23 ctermfg=14 cterm=bold
+hi DiffAdd	ctermbg=23 ctermfg=10 cterm=bold
+hi DiffChange	ctermbg=52
+hi DiffDelete	ctermbg=52 ctermfg=88
+hi DiffText	ctermbg=23 ctermfg=14 cterm=bold
 
 " Enable python syntax highlight.
 "let g:python_highlight_all=1
