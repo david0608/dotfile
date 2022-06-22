@@ -11,7 +11,6 @@ Plug 'overcache/NeoSolarized'
 " Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 " Plug 'Valloric/YouCompleteMe'
-Plug '~/.vim/example-plugin'
 call plug#end()
 
 set path+=**
