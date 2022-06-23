@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'overcache/NeoSolarized'
+Plug 'vim-scripts/SyntaxAttr.vim'
 call plug#end()
 
 set mouse=a
@@ -28,3 +29,5 @@ nnoremap s<right> <c-w>l
 nnoremap t<return> :tabedit<return>
 nnoremap <s-tab> :tabprev<return>
 nnoremap <tab> :tabnext<return>
+
+nnoremap <f2> :call SyntaxAttr()<cr>
