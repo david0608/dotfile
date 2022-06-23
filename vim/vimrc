@@ -67,6 +67,10 @@ nnoremap s<up> <c-w>k
 nnoremap sl <c-w>l
 nnoremap s<right> <c-w>l
 
+nnoremap t<return> :tabedit<return>
+nnoremap <s-tab> :tabprev<return>
+nnoremap <tab> :tabnext<return>
+
 func CommentInNormal()
 	if exists("b:comment_leader")
 		exec "s/^/" .b:comment_leader ."/"
