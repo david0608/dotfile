@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'overcache/NeoSolarized'
+Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/SyntaxAttr.vim'
 call plug#end()
 
@@ -8,7 +8,8 @@ set mouse=a
 syntax enable
 set background=dark
 set termguicolors
-colorscheme NeoSolarized
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
