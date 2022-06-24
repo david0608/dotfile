@@ -1,4 +1,7 @@
 call plug#begin()
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/SyntaxAttr.vim'
 Plug 'vim-python/python-syntax'
@@ -14,6 +17,11 @@ set termguicolors
 set background=dark
 let g:gruvbox_italic=1
 colorscheme gruvbox
+
+" Config airline.
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='base16_gruvbox_dark_medium'
 
 " Enable all python syntax highlight.
 let g:python_highlight_all=1
