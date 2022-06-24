@@ -22,6 +22,10 @@ colorscheme gruvbox
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='base16_gruvbox_dark_medium'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.colnr = "\u33c7"
 
 " Enable all python syntax highlight.
 let g:python_highlight_all=1
