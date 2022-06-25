@@ -1,5 +1,6 @@
 " Plugins {{{1
 call plug#begin()
+Plug 'neovim/nvim-lspconfig'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -46,10 +47,9 @@ nnoremap s<down> <c-w>j
 nnoremap s<up> <c-w>k
 nnoremap s<right> <c-w>l
 
-" Tab {{{1
-nnoremap t<return> :tabedit<return>
-nnoremap <s-tab> :tabprev<return>
-nnoremap <tab> :tabnext<return>
+" Buffer {{{1
+nnoremap <s-tab> :bp<cr>
+nnoremap <tab> :bn<cr>
 
 " Comment {{{1
 nnoremap <silent> <leader>c :<c-u>call CommentInNormal()<CR>
