@@ -1,6 +1,7 @@
 " Plugins {{{1
 call plug#begin()
 Plug 'neovim/nvim-lspconfig'
+Plug 'tami5/lspsaga.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
