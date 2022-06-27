@@ -41,6 +41,9 @@ Plug 'vim-scripts/SyntaxAttr.vim'
 " Python syntax highlight.
 Plug 'vim-python/python-syntax'
 
+" Insert or delete brackets, parens, quotes in pair.
+Plug 'windwp/nvim-autopairs'
+
 call plug#end()
 
 " General {{{1
@@ -141,6 +144,18 @@ let g:python_highlight_all=1
 autocmd FileType python call SetupPython()
 func SetupPython()
 	let b:comment_leader="# "
+endfunc
+
+" JSON {{{1
+autocmd FileType json call SetupJSON()
+func SetupJSON()
+	setlocal expandtab shiftwidth=2 tabstop=2
+endfunc
+
+" ES6 {{{1
+autocmd FileType javascript,typescriptreact call SetupES6()
+func SetupES6()
+	setlocal expandtab smarttab shiftwidth=4 tabstop=4
 endfunc
 
 " Others {{{1

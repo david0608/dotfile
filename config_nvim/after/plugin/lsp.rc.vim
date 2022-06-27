@@ -29,7 +29,6 @@ local capabilities = require'cmp_nvim_lsp'.update_capabilities(
 
 require'lspconfig'.tsserver.setup{
 	on_attach = on_attach,
-	filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
 	capabilities = capabilities
 }
 
