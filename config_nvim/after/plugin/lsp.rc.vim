@@ -1,7 +1,7 @@
-if !exists('g:lspconfig') | finish | endif
-
 lua << EOF
-local nvim_lsp = require'lspconfig'
+require'nvim-lsp-installer'.setup{
+	automatic_installation = true
+}
 
 local on_attach = function (client, bufnr)
 	local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -10,6 +10,10 @@ local on_attach = function (client, bufnr)
 	local opts = { noremap = true, silent = true }
 
 	buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+	buf_set_keymap('n', '<c-j>', '<cmd>Lspsaga diagnostic_jump_next<cr>', opts)
+	buf_set_keymap('n', 'K', '<cmd>Lspsaga hover_doc<cr>', opts)
+	buf_set_keymap('i', '<c-k>', '<cmd>Lspsaga signature_help<cr>', opts)
+	buf_set_keymap('n', 'gh', '<cmd>Lspsaga lsp_finder<cr>', opts)
 
 	if client.resolved_capabilities.document_formatting then
 		vim.api.nvim_command [[augroup Format]]
@@ -19,15 +23,26 @@ local on_attach = function (client, bufnr)
 	end
 end
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+local capabilities = require'cmp_nvim_lsp'.update_capabilities(
 	vim.lsp.protocol.make_client_capabilities()
 )
 
-nvim_lsp.tsserver.setup {
+require'lspconfig'.tsserver.setup{
 	on_attach = on_attach,
 	filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
 	capabilities = capabilities
 }
 
-nvim_lsp.pyright.setup{}
+require'lspconfig'.pyright.setup{
+	on_attach = on_attach,
+	capabilities = capabilities
+}
+
+require'lspsaga'.init_lsp_saga{
+	error_sign = '',
+	warn_sign = '',
+	hint_sign = '',
+	infor_sign = '',
+	border_style = "round",
+}
 EOF

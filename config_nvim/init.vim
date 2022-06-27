@@ -1,32 +1,54 @@
 " Plugins {{{1
 call plug#begin()
+" LSP server installer.
+Plug 'williamboman/nvim-lsp-installer'
+
+" LSP client configs.
 Plug 'neovim/nvim-lspconfig'
+
+" LSP client UI.
 Plug 'tami5/lspsaga.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+
+" Completion engine.
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-vsnip'
+
+" Snippet.
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'hrsh7th/cmp-vsnip'
+
+" File browser.
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'BurntSushi/ripgrep'
 Plug 'sharkdp/fd'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'tpope/vim-fugitive'
+
+" Status line.
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+
+" Color theme.
 Plug 'morhetz/gruvbox'
+
+" Display syntax highlight attributes util.
 Plug 'vim-scripts/SyntaxAttr.vim'
+
+" Python syntax highlight.
 Plug 'vim-python/python-syntax'
+
 call plug#end()
 
 " General {{{1
 set mouse=a
 set foldmethod=marker
 let mapleader="-"
+
+nnoremap <leader>n :noh<cr>
 
 " Color scheme {{{1
 set termguicolors
