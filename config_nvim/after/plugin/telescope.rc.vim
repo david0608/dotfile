@@ -1,5 +1,9 @@
 lua << EOF
-require'telescope'.setup{}
+require'telescope'.setup{
+	defaults = {
+		initial_mode = "normal"
+	}
+}
 EOF
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
