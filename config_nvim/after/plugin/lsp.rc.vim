@@ -29,19 +29,29 @@ local capabilities = require'cmp_nvim_lsp'.update_capabilities(
 
 require'lspconfig'.tsserver.setup{
 	on_attach = on_attach,
-	capabilities = capabilities
+	capabilities = capabilities,
+	handlers = {
+		["textDocument/publishDiagnostics"] = vim.lsp.with(
+			vim.lsp.diagnostic.on_publish_diagnostics, {
+				signs = false
+			}
+		)
+	}
 }
 
 require'lspconfig'.pyright.setup{
 	on_attach = on_attach,
-	capabilities = capabilities
+	capabilities = capabilities,
+	handlers = {
+		["textDocument/publishDiagnostics"] = vim.lsp.with(
+			vim.lsp.diagnostic.on_publish_diagnostics, {
+				signs = false
+			}
+		)
+	}
 }
 
 require'lspsaga'.init_lsp_saga{
-	error_sign = '',
-	warn_sign = '',
-	hint_sign = '',
-	infor_sign = '',
-	border_style = "round",
+	border_style = "round"
 }
 EOF

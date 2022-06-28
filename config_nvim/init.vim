@@ -153,7 +153,7 @@ func SetupJSON()
 endfunc
 
 " ES6 {{{1
-autocmd FileType javascript,typescriptreact call SetupES6()
+autocmd FileType javascript,typescript,typescriptreact call SetupES6()
 func SetupES6()
 	setlocal expandtab smarttab shiftwidth=4 tabstop=4
 endfunc
