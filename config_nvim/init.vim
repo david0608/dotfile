@@ -161,3 +161,12 @@ endfunc
 " Others {{{1
 " Show syntax information short cut.
 nnoremap <f2> :call SyntaxAttr()<cr>
+
+" Save buffer content.
+nnoremap <leader>w :w<cr>
+
+" Close buffer.
+nnoremap <leader>q :q<cr>
+
+" Close all buffer.
+nnoremap <leader>Q :qa<cr>
