@@ -165,8 +165,11 @@ nnoremap <f2> :call SyntaxAttr()<cr>
 " Save buffer content.
 nnoremap <leader>w :w<cr>
 
-" Close buffer.
-nnoremap <leader>q :q<cr>
+" Close window.
+noremap <leader>q :q<cr>
 
-" Close all buffer.
+" Close all windows.
 nnoremap <leader>Q :qa<cr>
+
+" Delete buffer.
+nnoremap <leader>bd :bd<cr>
