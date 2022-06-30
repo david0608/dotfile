@@ -16,10 +16,13 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 
-" Snippet.
+" Snippet engine.
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'hrsh7th/cmp-vsnip'
+
+" Snippets.
+Plug 'rafamadriz/friendly-snippets'
 
 " File browser.
 Plug 'nvim-telescope/telescope.nvim'
@@ -153,7 +156,7 @@ func SetupJSON()
 endfunc
 
 " ES6 {{{1
-autocmd FileType javascript,typescript,typescriptreact call SetupES6()
+autocmd FileType javascript,typescript,javascriptreact,typescriptreact call SetupES6()
 func SetupES6()
 	setlocal expandtab smarttab shiftwidth=4 tabstop=4
 endfunc
