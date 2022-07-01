@@ -9,6 +9,9 @@ Plug 'neovim/nvim-lspconfig'
 " LSP client UI.
 Plug 'tami5/lspsaga.nvim'
 
+" Treesitter configurations and abstraction layer for Neovim.
+Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
+
 " Completion engine.
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -40,9 +43,6 @@ Plug 'morhetz/gruvbox'
 
 " Display syntax highlight attributes util.
 Plug 'vim-scripts/SyntaxAttr.vim'
-
-" Python syntax highlight.
-Plug 'vim-python/python-syntax'
 
 " Insert or delete brackets, parens, quotes in pair.
 Plug 'windwp/nvim-autopairs'
