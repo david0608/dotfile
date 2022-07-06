@@ -16,7 +16,7 @@ cmp.setup({
 		['<c-f>'] = cmp.mapping.scroll_docs(4),
 		['<c-space>'] = cmp.mapping.complete(),
 		['<c-e>'] = cmp.mapping.close(),
-		['<cr>'] = cmp.mapping.confirm({ select = true }),
+		['<cr>'] = cmp.mapping.confirm(),
 		['<tab>'] = function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
