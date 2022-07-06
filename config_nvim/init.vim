@@ -50,6 +50,8 @@ Plug 'windwp/nvim-autopairs'
 call plug#end()
 
 " General {{{1
+set number
+set relativenumber
 set mouse=a
 set foldmethod=marker
 let mapleader="-"
