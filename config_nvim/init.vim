@@ -52,6 +52,7 @@ call plug#end()
 " General {{{1
 set number
 set relativenumber
+set signcolumn=number
 set mouse=a
 set foldmethod=marker
 let mapleader="-"
