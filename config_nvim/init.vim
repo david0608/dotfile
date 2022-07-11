@@ -1,10 +1,8 @@
 " Plugins {{{1
 call plug#begin()
-" LSP server installer.
-Plug 'williamboman/nvim-lsp-installer'
-
 " LSP client configs.
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
 
 " LSP client UI.
 Plug 'tami5/lspsaga.nvim'
@@ -43,6 +41,9 @@ Plug 'morhetz/gruvbox'
 
 " Insert or delete brackets, parens, quotes in pair.
 Plug 'windwp/nvim-autopairs'
+
+" Comment stuff out.
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -93,62 +94,6 @@ nnoremap s<right> <c-w>l
 nnoremap <s-tab> :bp<cr>
 nnoremap <tab> :bn<cr>
 
-" Comment {{{1
-nnoremap <silent> <leader>c :<c-u>call CommentInNormal()<CR>
-nnoremap <silent> <leader>uc :<c-u>call UnCommentInNormal()<CR>
-vnoremap <silent> <leader>c :<c-u>call CommentInVisual()<CR>
-vnoremap <silent> <leader>uc :<c-u>call UnCommentInVisual()<CR>
-
-func CommentInNormal()
-	if exists("b:comment_leader")
-		exec "s/^/" .b:comment_leader ."/"
-		noh
-	else
-		echom "b:comment_leader not declared."
-	endif
-endfunc
-
-func UnCommentInNormal()
-	if exists("b:comment_leader")
-		exec "s/^" .b:comment_leader ."//"
-		noh
-	else
-		echom "b:comment_leader not declared."
-	endif
-endfunc
-
-func CommentInVisual()
-	if exists("b:comment_leader")
-		exec "'<,'>s/^/" .b:comment_leader ."/"
-		noh
-	else
-		echom "b:comment_leader not declared."
-	endif
-endfunc
-
-func UnCommentInVisual()
-	if exists("b:comment_leader")
-		exec "'<,'>s/^" .b:comment_leader ."//"
-		noh
-	else
-		echom "b:comment_leader not declared."
-	endif
-endfunc
-
-" Vim {{{1
-autocmd FileType vim call SetupVim()
-func SetupVim()
-	let b:comment_leader="\" "
-endfunc
-
-" Python {{{1
-let g:python_highlight_all=1
-
-autocmd FileType python call SetupPython()
-func SetupPython()
-	let b:comment_leader="# "
-endfunc
-
 " JSON {{{1
 autocmd FileType json call SetupJSON()
 func SetupJSON()
@@ -159,12 +104,10 @@ endfunc
 autocmd FileType javascript,typescript,javascriptreact,typescriptreact call SetupES6()
 func SetupES6()
 	setlocal expandtab smarttab shiftwidth=4 tabstop=4
+	setlocal commentstring={/*\ %s\ */}
 endfunc
 
 " Others {{{1
-" Show syntax information short cut.
-nnoremap <f2> :call SyntaxAttr()<cr>
-
 " Save buffer content.
 nnoremap <leader>w :w<cr>
 
