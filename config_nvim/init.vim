@@ -45,6 +45,9 @@ Plug 'windwp/nvim-autopairs'
 " Comment stuff out.
 Plug 'tpope/vim-commentary'
 
+" NerdTree
+Plug 'preservim/nerdtree'
+
 call plug#end()
 
 " General {{{1
@@ -119,3 +122,5 @@ nnoremap <leader>Q :qa<cr>
 
 " Delete buffer.
 nnoremap <leader>bd :bd<cr>
+
+nnoremap <c-f> :NERDTreeFocus<cr>
