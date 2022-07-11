@@ -41,9 +41,6 @@ Plug 'tpope/vim-fugitive'
 " Color theme.
 Plug 'morhetz/gruvbox'
 
-" Display syntax highlight attributes util.
-Plug 'vim-scripts/SyntaxAttr.vim'
-
 " Insert or delete brackets, parens, quotes in pair.
 Plug 'windwp/nvim-autopairs'
 
