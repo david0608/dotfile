@@ -2,6 +2,11 @@ lua << EOF
 require'telescope'.setup{
 	defaults = {
 		initial_mode = "normal"
+	},
+	pickers = {
+		find_files = {
+			hidden = true,
+		}
 	}
 }
 EOF
