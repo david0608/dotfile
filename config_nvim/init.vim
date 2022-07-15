@@ -110,6 +110,10 @@ func SetupES6()
 	setlocal commentstring={/*\ %s\ */}
 endfunc
 
+" NERDTree {{{1
+let NERDTreeShowHidden=1
+nnoremap <c-f> :NERDTreeFocus<cr>
+
 " Others {{{1
 " Save buffer content.
 nnoremap <leader>w :w<cr>
@@ -122,5 +126,3 @@ nnoremap <leader>Q :qa<cr>
 
 " Delete buffer.
 nnoremap <leader>bd :bd<cr>
-
-nnoremap <c-f> :NERDTreeFocus<cr>
