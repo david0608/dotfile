@@ -113,6 +113,7 @@ endfunc
 " NERDTree {{{1
 let NERDTreeShowHidden=1
 nnoremap <c-f> :NERDTreeFocus<cr>
+nnoremap F :NERDTreeFind<cr>
 
 " Others {{{1
 " Save buffer content.
