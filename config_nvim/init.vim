@@ -103,6 +103,12 @@ func SetupJSON()
 	setlocal expandtab shiftwidth=2 tabstop=2
 endfunc
 
+" C/C++ {{{1
+autocmd FileType c,cpp call SetupCCpp()
+func SetupCCpp()
+	setlocal expandtab shiftwidth=4 tabstop=4
+endfunc
+
 " ES6 {{{1
 autocmd FileType javascript,typescript,javascriptreact,typescriptreact call SetupES6()
 func SetupES6()
