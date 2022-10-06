@@ -107,6 +107,7 @@ endfunc
 autocmd FileType c,cpp call SetupCCpp()
 func SetupCCpp()
 	setlocal expandtab shiftwidth=4 tabstop=4
+	setlocal commentstring=//%s
 endfunc
 
 " ES6 {{{1
