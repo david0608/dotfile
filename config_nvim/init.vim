@@ -97,6 +97,12 @@ nnoremap s<right> <c-w>l
 nnoremap <s-tab> :bp<cr>
 nnoremap <tab> :bn<cr>
 
+" HTML {{{1
+autocmd FileType html call SetupHTML()
+func SetupHTML()
+	setlocal expandtab shiftwidth=4 tabstop=4
+endfunc
+
 " JSON {{{1
 autocmd FileType json call SetupJSON()
 func SetupJSON()
