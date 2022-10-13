@@ -1,0 +1,27 @@
+{
+  "Tag": {
+    "prefix": ["<>"],
+    "body": [
+      "<$1>$0</$1>"
+    ],
+    "description": "Tag."
+  },
+  "Tag-multiline": {
+    "prefix": ["<>>"],
+    "body": [
+      "<$1",
+      "\t$2",
+      ">",
+      "\t$0",
+      "</$1>"
+    ],
+    "description": "Multiline tag."
+  },
+  "Tag-close": {
+    "prefix": ["<>/"],
+    "body": [
+      "<$1/>"
+    ],
+    "description": "Self close tag."
+  }
+}
