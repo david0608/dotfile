@@ -103,6 +103,12 @@ func SetupHTML()
 	setlocal expandtab shiftwidth=4 tabstop=4
 endfunc
 
+" CSS {{{1
+autocmd FileType css call SetupCSS()
+func SetupCSS()
+	setlocal expandtab shiftwidth=4 tabstop=4
+endfunc
+
 " JSON {{{1
 autocmd FileType json call SetupJSON()
 func SetupJSON()
