@@ -8,7 +8,7 @@ Plug 'williamboman/nvim-lsp-installer'
 Plug 'tami5/lspsaga.nvim'
 
 " Treesitter configurations and abstraction layer for Neovim.
-Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': 'TSUpdate', 'commit': '1ed2a3c' }
 
 " Completion engine.
 Plug 'hrsh7th/nvim-cmp'
