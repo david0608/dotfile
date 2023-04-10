@@ -15,7 +15,7 @@ local on_attach = function (client, bufnr)
 	buf_set_keymap('i', '<c-k>', '<cmd>Lspsaga signature_help<cr>', opts)
 	buf_set_keymap('n', 'gh', '<cmd>Lspsaga lsp_finder<cr>', opts)
 
-	if client.resolved_capabilities.document_formatting then
+	if client.server_capabilities.document_formatting then
 		vim.api.nvim_command [[augroup Format]]
 		vim.api.nvim_command [[autocmd! * <buffer>]]
 		vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
