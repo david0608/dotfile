@@ -1,6 +1,6 @@
 lua << EOF
 require'nvim-lsp-installer'.setup{
-	automatic_installation = true
+	automatic_installation = false
 }
 
 local on_attach = function (client, bufnr)
